@@ -46,7 +46,7 @@ export default function Home() {
 
   // The following string and 2 arrays were copied from this url - https://brad-carter.medium.com/how-to-animate-a-text-reveal-effect-in-react-with-framer-motion-ae8ddd296f0d
 
-  const welcome = "Welcome!"
+  const welcome = "Welcome! I'm Rita!"
   
 
   const sentence = {

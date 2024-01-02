@@ -130,7 +130,7 @@ export default function Home() {
             <img src='./newchilli.png' title="Me as a chilli pepper" className='h-[200px]' />
             
             <div className='flex flex-col gap-5 justify-center py-10'>
-              <p className='inline align-middle text-5xl text-center antialiased font-extrabold'>I'm Rita Toussaint and I'm a CodeClan graduate, <br></br>a career changer, and a web developer!</p>
+              <p className='inline align-middle text-5xl text-center antialiased font-extrabold'>I&apos;m Rita Toussaint and I&apos;m a CodeClan graduate, <br></br>a career changer, and a web developer!</p>
               <a onClick={toggleShowProjects} className='text-green-600 dark:text-violet-300 text-2xl text-center cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-150'>
                 My Projects →
             </a>

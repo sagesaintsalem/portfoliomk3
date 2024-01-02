@@ -82,7 +82,7 @@ export default function Projects() {
             <div className="flex justify-center">
             <div className="lg:flex lg:flex-row lg:justify-evenly lg:w-3/4 text-center sm:h-svh sm:grid sm:grid-rows-2">
             {projects.map((item, index) => (
-                <motion.div layoutId={index} className="bg-green-300 dark:bg-violet-300 dark:text-black lg:h-14 sm:h-5 rounded-sm px-2 lg:w-40 ">
+                <motion.div layoutId={index} key={index} className="bg-green-300 dark:bg-violet-300 dark:text-black lg:h-14 sm:h-5 rounded-sm px-2 lg:w-40 ">
                         <motion.p onClick={() => setSelectedId(index)} className="font-semibold md:text-lg sm:text-sm hover:cursor-pointer">{item.title}</motion.p>
                         <motion.p className="truncate md:text-sm sm:text-xs opacity-80" onClick={() => setSelectedId(null)}>{item.stack}</motion.p>
                 </motion.div>
@@ -105,15 +105,14 @@ export default function Projects() {
                                     </motion.div>
                                         <motion.div ref={elementPoint} className="flex flex-row h-[150px] overflow-x-auto no-scrollbar scroll-smooth justify-around my-4 snap-x transition-all duration-200 ease-in">
                                             {projects[selectedId].images.map((item, index) => (
-                                                    <AnimatePresence>
-                                                        <motion.img 
+                                                <motion.img 
                                                     src={item} 
                                                     key={index} 
                                                     initial={{ x: 600, opacity: 0 }}
                                                     animate={{ x: 0, opacity: 1 }}
                                                     exit={{ x: -600, opacity: 0 }}
                                                     className="flex justify-between rounded-sm snap-center"/>
-                                                    </AnimatePresence>
+                                                   
                                             ))}
                                         </motion.div>
                                     <motion.p className="text-lg pt-8 px-2 ">{projects[selectedId].text}</motion.p>
